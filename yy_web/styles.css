@@ -1,0 +1,363 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #121212;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(18, 18, 18, 0.98);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fe2c55;
+}
+
+section {
+    padding: 60px 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.background-image {
+    background: linear-gradient(45deg, #121212, #1f1f1f);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar-container {
+    margin: -80px auto 20px;
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    border: 4px solid #fe2c55;
+    box-shadow: 0 4px 15px rgba(254, 44, 85, 0.2);
+    background-image: url('imgs/avatar.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #fe2c55, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(254, 44, 85, 0.1);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(254, 44, 85, 0.3);
+    color: #fe2c55;
+}
+
+.intro {
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.button {
+    display: inline-block;
+    background: #fe2c55;
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(254, 44, 85, 0.2);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(254, 44, 85, 0.3);
+}
+
+.experience-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.timeline {
+    width: 30%;
+}
+
+.timeline-item {
+    padding: 1rem;
+    border-left: 3px solid #fe2c55;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.experience-details {
+    width: 70%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hobby-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    border-color: #fe2c55;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.moment-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.moment-card:hover {
+    transform: translateY(-5px);
+    border-color: #fe2c55;
+}
+
+.moment-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.moment-content {
+    padding: 1rem;
+}
+
+.moment-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.moment-description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.05);
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #fe2c55;
+    border-radius: 25px;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    background: rgba(254, 44, 85, 0.1);
+}
+
+.social-icons a:hover {
+    background: #fe2c55;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        background: #121212;
+    }
+    
+    nav ul {
+        padding: 0.6rem 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        justify-content: flex-start;
+        padding-left: 16px;
+    }
+    
+    nav ul li {
+        margin: 0 12px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+    
+    .overlay {
+        padding: 1.5rem;
+    }
+    
+    .avatar-container {
+        margin: -60px auto 15px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .overlay h1 {
+        font-size: 1.8rem;
+    }
+    
+    .title {
+        font-size: 1rem;
+    }
+    
+    .intro {
+        font-size: 0.9rem;
+    }
+    
+    .tag {
+        font-size: 0.8rem;
+        padding: 3px 10px;
+    }
+    
+    section {
+        padding: 40px 16px;
+    }
+    
+    .experience-container {
+        flex-direction: column;
+    }
+    
+    .timeline, .experience-details {
+        width: 100%;
+    }
+    
+    .portfolio-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .moment-card {
+        margin-bottom: 1rem;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icons a {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+} 
